@@ -1,0 +1,641 @@
+/* ----- GLOBAL ----- */
+
+* { box-sizing: border-box; }
+
+html {
+	font-size: 100%;
+	font-family: 'Lato', sans-serif;
+	background-image: url("../media/background2.jpg");
+	background-size: cover;
+	background-position: 50%;
+	background-attachment: fixed;
+}
+
+h1, h2, h3, ul, .name, .contact-button {
+	font-family: 'Patua One', cursive;
+}
+
+body {
+	margin-top: 4.5rem;
+}
+
+main {
+	width: 80%;
+	margin: 1rem auto;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* ----- NAVIGATION BAR ----- */
+
+header {
+	width: 100%;
+	height: 3.5rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: white;
+	border-bottom: 1px solid lightgray;
+	z-index: 900;
+
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.name a {
+	text-decoration: none;
+	color: black;
+	display: block;
+	font-size: 2rem;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	padding: 0 1rem;
+	transition: all .4s ease;
+}
+
+.name a:hover, .name a:active {
+	background-color: gray;
+	color: white;
+}
+
+nav ul li a:hover, nav ul li a:active {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
+}
+
+
+/* ----- HOME ----- */
+
+.name-index {
+	text-align: center;
+	width: 100%;
+}
+
+.home-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.darken {
+	opacity: 0.6;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+}
+
+.center-container {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+}
+
+.center-container img {
+	border-radius: 50%;
+	border: 2px solid white;
+}
+
+.center-container h1 {
+	font-size: 1.5rem;
+	text-align: center;
+	color: white;
+}
+
+footer {
+	width: 100%;
+	height: 5.1875rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+}
+
+footer ul {
+	width: 100%;
+	padding: 0;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+footer ul li {
+	width: 25%;
+	list-style: none;
+}
+
+footer ul li a {
+	width: 100%;
+	height: 5.1875rem;
+	line-height: 5.1875rem;
+	margin-top: -1rem;
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	color: black;
+	transition: all .4s ease;
+}
+
+footer ul li:not(:last-child) a {
+	border-right: 1px solid lightgray;
+}
+
+footer ul li a:hover, footer ul li a:active {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
+}
+
+.video-container {
+	height: 100vh;
+	display: flex;
+	margin-top: -4.5rem;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	z-index: 950;
+}
+
+.video-container video {
+	min-height: 100%;
+}
+
+
+/* ----- ABOUT ----- */
+
+#img-resume-container {
+	margin: 1rem auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#main-about div picture img {
+	border-radius: 50%;
+}
+
+#resume-button {
+	display: block;
+	width: 6.25rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+	background-color: #c1c1c1;
+	border-radius: 3px;
+	margin: 1rem auto;
+	margin-bottom: 1rem;
+	font-size: 0.75rem;
+	text-decoration: none;
+	color: black;
+}
+
+#resume-button:hover, #resume-button:active {
+	background-color: gray;
+	color: white;
+}
+
+#bio {
+	line-height: 1.25rem;
+}
+
+
+/* ----- PORTFOLIO ----- */
+
+#main-projects {
+	width: 90%;
+	margin: 0 5%;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.project {
+	position: relative;
+	width: 100%;
+	height: 29rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0px 5px 15px -3px rgba(0,0,0,0.75);
+	overflow: hidden;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.project h1 {
+	font-size: 2.25rem;
+	margin: 1rem;
+	text-align: center;
+	color: white;
+}
+
+.project img {
+	width: 60%;
+	margin: 0.5rem 20%;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-info-bar {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.project-info {
+	width: 70%;
+	font-size: 0.90rem;
+	display: flex;
+	align-items: center;
+}
+
+.project-info p {
+	padding: 0 1rem;
+}
+
+.project-info-bar a {
+	width: 30%;
+	display: block;
+	text-align: center;
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: black;
+	border-left: 1px solid gray;
+	transition: all .4s ease;
+}
+
+.project-info-bar a:hover, .project-info-bar a:active {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
+}
+
+#gvb-redesign {
+	background-image: url("../media/gvb-redesign-background.jpg");
+	background-size: cover;
+	background-position: 50%;
+}
+
+#gplaymusic {
+	background-color: #ee6b03;
+}
+
+#gplaymusic picture, #gplaymusic img {
+	margin-top: 2rem;
+}
+
+#jimmysapp {
+	background-color: #0a48ad;
+}
+
+#jimmysapp picture, #jimmysapp img {
+	margin-top: 4rem;
+}
+
+/* ----- PLAYLISTS ----- */
+
+.playlist-info {
+	margin: 1rem auto;
+}
+
+.test-box {
+	margin: 1rem auto;
+	width: 100%;
+	height: 18.75rem;
+}
+
+
+/* ----- CONTACT ----- */
+
+#footer-contact {
+	height: auto;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#footer-contact div a {
+	text-decoration: none;
+	color: white;
+}
+
+.contact-button {
+	width: 50%;
+	height: 4rem;
+	line-height: 4rem;
+	text-align: center;
+}
+
+.contact-button a {
+	display: block;
+}
+
+.contact-button:nth-child(2) {
+	border: 1px solid white;
+}
+
+.contact-button:nth-child(3) {
+	border-right: 1px solid white;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+.contact-button:nth-child(4) {
+	border: 1px solid white;
+	border-top: none;
+}
+
+.contact-button:nth-child(5) {
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+.email-bar {
+	background-color: #ea4335;
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	color: white;
+}
+
+.email-bar h3, .email-bar h4 {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+#facebook {
+	background-color: #3b5998;
+}
+
+#twitter {
+	background-color: #1da1f2;
+}
+
+#linkedin {
+	background-color: #0077b5;
+}
+
+#github {
+	background-color: #24292e;
+}
+
+
+/* ----- RESPONSIVE CSS ----- */
+
+@media (min-width: 35em) {
+	html {
+		font-size: 20px;
+	}
+
+	#bio {
+		font-size: 0.8rem;
+		line-height: 1.1rem;
+	}
+
+	.playlist-info p {
+		font-size: 0.8rem;
+	}
+
+	#jimmysapp picture, #jimmysapp img {
+		margin-top: 2rem;
+	}
+
+}
+
+@media (min-width: 48rem) {
+	#hamburger {
+		display: none;
+	}
+
+	nav ul {
+		height: 3.5rem;
+		font-size: 0.75rem;
+		list-style: none;
+		margin: 0 1rem 0 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	nav ul li {
+		height: 3.5rem;
+	}
+
+	nav ul li a {
+		display: block;
+		height: 100%;
+		width: 100%;
+		padding: 0 0.1rem;
+		text-align: center;
+		line-height: 3.5rem;
+		margin: 0 1rem;
+		color: black;
+		text-decoration: none;
+		border-left: 0.1px solid #efefef;
+		transition: background-color .4s ease, color .4s ease;
+	}
+
+	#main-playlists {
+		width: 90%;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.playlist-info, .test-box {
+		width: 45%;
+		margin: 1rem auto;
+	}
+
+	.contact-button {
+		width: 25%;
+		border: none !important;
+	}
+}
+
+@media (min-width: 60em) {
+	nav ul li a {
+		transition: all .4s ease;
+	}
+
+	#main-about {
+		width: 100%;
+		height: 80vh;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#img-resume-container {
+		width: 40%;
+	}
+
+	#bio {
+		width: 60%;
+		padding-right: 2rem;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.project {
+		max-height: 575px;
+	}
+
+	.project-info {
+		justify-content: center;
+	}
+
+	.project-info p {
+		padding: 0 4rem;
+		font-size: 1rem;
+		text-align: center;
+	}	
+}
+
+@media (min-width: 75em) {
+	#bio {
+		font-size: 0.8rem;
+		padding-left: 1rem;
+		padding-right: 4rem;
+	}
+
+	.project {
+		flex-flow: row nowrap;
+	}
+
+	.project h1 {
+		width: 50%;
+		padding: 0 0 0 2rem;
+		align-self: center;
+		font-size: 3rem;
+		text-align: left;
+		margin-top: -3rem;
+	}
+
+	.project-images {
+		width: 50%;
+	}
+
+	.project-images img {
+		width: 80%;
+		margin: 1rem 10%;
+	}
+
+	#gplaymusic .project-images {
+		align-self: center;
+		margin-top: -5rem;
+	}
+
+	.project-info-bar {
+		left: 0;
+	}
+
+	#jimmysapp .project-images {
+		align-self: center;
+		margin-top: -5rem;
+	}
+}
+
+@media (min-width: 90em) {
+	html {
+		font-size: 22px;
+	}
+
+	#bio {
+		width: 55%;
+		padding-left: 0;
+		padding-right: 6rem;
+
+	}
+}
+
+@media (min-width: 100rem) {
+	html {
+		font-size: 24px;
+	}
+
+	#gplaymusic .project-images {
+		margin-top: 0;
+	}
+
+	#jimmysapp .project-images {
+		margin-top: 0;
+	}
+}
+
+/* ---- HAMBURGER MENU ---- */
+
+@media (max-width: 48rem) {
+	#hamburger {
+		height: 3.5rem;
+		margin-right: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hamburger img {
+		display: block;
+		cursor: pointer;
+	}
+
+	nav ul {
+		opacity: 0;
+		position: fixed;
+		top: 3.5rem;
+		right: -50vw;
+		width: 50%;
+		height: 20rem;
+		padding: 0;
+		background-color: white;
+		list-style: none;
+		z-index: 1000;
+		box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.4);
+		display: flex;
+		flex-flow: column nowrap;
+		transition: all .5s ease;
+	}
+
+	nav ul li {
+		height: 25%;
+		width: 100%;
+		color: black;
+		font-size: 1.5rem;
+	}
+
+	nav ul li a {
+		height: 100%;
+		width: 100%;
+		line-height: 5rem;
+		text-align: center;
+		display: block;
+		text-decoration: none;
+		color: black;
+		transition: all .4s ease;
+	}
+
+	nav ul li:not(:last-child) {
+		border-bottom: 1px solid lightgray;
+	}
+
+	.display {
+		opacity: 1;
+		right: 1rem;
+	}
+}
