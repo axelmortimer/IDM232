@@ -285,9 +285,7 @@ footer ul li a:hover, footer ul li a:active {
 }
 
 #gvb-redesign {
-	background-image: url("../media/gvb-redesign-background.jpg");
-	background-size: cover;
-	background-position: 50%;
+	background-color: #31283b;
 }
 
 #gplaymusic {
