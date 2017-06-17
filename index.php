@@ -60,59 +60,6 @@
 
 	</main>
 
-	<!-- <main id="main-projects">
-		<div class="project" id="gvb-redesign">
-			<h1>GORILLA VS. BEAR REDESIGN</h1>
-			<div class="project-images">
-				<picture>
-					<source media="(min-width: 50rem)" srcset="media/gvb-large.jpg">
-					<img src="media/gvb-small.jpg" alt="Gorilla Vs. Bear Screenshot">
-				</picture>
-			</div>
-			<div class="project-info-bar">
-				<div class="project-info">
-					<p>Updating a music news site desperately in need of a responsive makeover.</p>
-				</div>
-				<a href="https://preview.uxpin.com/23d68bb08681c7466f13bd92cedb51b806bede75#/pages/67307022">
-					<h3>VIEW</h3>
-				</a>
-			</div>
-		</div>
-		<div class="project" id="gplaymusic">
-			<h1>GOOGLE PLAY MUSIC DESKTOP REDESIGN</h1>
-			<div class="project-images">
-				<picture>
-					<source media="(min-width: 50rem)" srcset="media/gpm-large.jpg">
-					<img src="media/gpm-small.jpg" alt="Google Play Music Screenshot">
-				</picture>
-			</div>
-			<div class="project-info-bar">
-				<div class="project-info">
-					<p>Prioritizing what matters most to music listeners.</p>
-				</div>
-				<a href="https://invis.io/PZ9ILXPEF">
-					<h3>VIEW</h3>
-				</a>
-			</div>
-		</div>
-		<div class="project" id="jimmysapp">
-			<h1>FOOD TRUCK APP</h1>
-			<div class="project-images">
-				<picture>
-					<source media="(min-width: 50rem)" srcset="media/foodapp-large.jpg">
-					<img src="media/foodapp-small.jpg" alt="Google Play Music Screenshot">
-				</picture>
-			</div>
-			<div class="project-info-bar">
-				<div class="project-info">
-					<p>Enhancing the user experience of a Drexel favorite.</p>
-				</div>
-				<a href="#">
-					<h3>VIEW</h3>
-				</a>
-			</div>
-		</div>
-	</main> -->
 	<script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
