@@ -50,13 +50,22 @@
 						echo '<div class="project-info">';
 							echo '<p>' . $row['description'] . '</p>';
 						echo '</div>';
-						echo '<a href="' . rawurldecode($row['link']) . '">';
+						echo '<a href="#" class="project-popup" id="' . $row['about'] . '">';
 							echo '<h3>VIEW</h3>';
 						echo '</a>';
 					echo '</div>';
 				echo '</div>';
 			}
 		?>
+
+		<div class="project-popup">
+			<div class="project-popup-background">
+				
+			</div>
+			<div class="project-popup-window">
+				
+			</div>
+		</div>
 
 	</main>
 
