@@ -42,7 +42,7 @@ header {
 	left: 0;
 	background-color: white;
 	border-bottom: 1px solid lightgray;
-	z-index: 900;
+	z-index: 50;
 
 	display: flex;
 	justify-content: space-between;
@@ -142,11 +142,15 @@ nav ul li a:hover, nav ul li a:active {
 	color: white;
 }
 
-#gvb-redesign {
+#gvb-redesign, #gvb-redesign-window {
 	background-color: #31283b;
 }
 
-#gplaymusic {
+#gvb-redesign-popup-target {
+	opacity: 0;
+}
+
+#gplaymusic, #gplaymusic-window {
 	background-color: #ee6b03;
 }
 
@@ -154,28 +158,131 @@ nav ul li a:hover, nav ul li a:active {
 	margin-top: 2rem;
 }
 
-#jimmysapp {
-	background-color: #0a48ad;
+#gplaymusic-popup-target {
+	opacity: 0;
+}
+
+#jimmysapp, #jimmysapp-window {
+	background-color: #0069b3;
 }
 
 #jimmysapp picture, #jimmysapp img {
-	margin-top: 4rem;
+	margin-top: 1rem;
+}
+
+#jimmysapp-popup-target {
+	opacity: 0;
 }
 
 .project-popup {
-	opacity: 1;
-	width: 100vw;
-	height: 100vh;
-}
-
-.project-popup-background {
 	position: fixed;
 	top: 0;
 	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	z-index: -100;
+	transition: opacity 1s ease-in-out;
+}
+
+.project-popup-background {
+	position: absolute;
+	top: 0;
+	left: 0;
 	background-color: black;
-	opacity: 0.8;
+	opacity: 0.95;
 	width: 100%;
 	height: 100%;
+}
+
+.project-popup-back {
+	position: absolute;
+	height: 2rem;
+	width: 4rem;
+	font-size: 0.9rem;
+	top: 0;
+	left: -5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #adadad;
+	z-index: 300;
+}
+
+.project-popup-back:hover {
+	color: white;
+	cursor: pointer;
+	transition: color 0.25s ease-in-out;
+}
+
+.project-popup-window {
+	position: relative;
+	background-color: #ededed;
+	box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.75);
+	width: 60%;
+	min-width: 300px;
+	max-width: 750px;
+	height: 90%;
+	max-height: 900px;
+	z-index: 200;
+	overflow-y: hidden;
+}
+
+.project-popup-window-header {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	height: 100px;
+	box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+	background-color: white;
+}
+
+.project-popup-window-info {
+	color: white;
+	margin-top: 85px;
+	padding: 25px;
+	font-size: 1rem;
+	line-height: 1.4rem;
+	height: 70%;
+	overflow-y: scroll;
+}
+
+.project-popup-window-links {
+	position: absolute;
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	min-width: 300px;
+	max-width: 750px;
+	bottom: 0%;
+	height: 75px;
+	box-shadow: 0px -2px 10px 0px rgba(0,0,0,0.5);
+	background-color: white;
+}
+
+.project-popup-window-buttons {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.25s ease-in-out;
+	border-top: 1px solid gray;
+	border-left: 1px solid gray;
+	text-decoration: none;
+	color: black;
+	background-color: #ededed;
+}
+
+.project-popup-window-buttons:hover {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
 }
 
 
@@ -280,7 +387,7 @@ nav ul li a:hover, nav ul li a:active {
 
 	#jimmysapp .project-images {
 		align-self: center;
-		margin-top: -5rem;
+		margin-top: 19rem;
 	}
 }
 
@@ -300,7 +407,7 @@ nav ul li a:hover, nav ul li a:active {
 	}
 
 	#jimmysapp .project-images {
-		margin-top: 0;
+		margin-top: 26rem;
 	}
 }
 

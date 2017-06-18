@@ -26,10 +26,10 @@
 				<img id="menu-icon" src="media/menu.svg" alt="menu-icon">
 			</div>
 			<ul>
-				<li><a href="#">About</a></li>
+				<li><a href="https://axelmortimer.com/about.html">About</a></li>
 				<li><a href="#"><b>Portfolio</b></a></li>
-				<li><a href="#">Playlists</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="https://axelmortimer.com/playlists.html">Playlists</a></li>
+				<li><a href="https://axelmortimer.com/contact.html">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -38,6 +38,8 @@
 
 		<?php
 			while ($row = mysqli_fetch_assoc($result)) {
+				
+				// Project Section
 				echo '<div class="project" id="' . $row['tag'] . '">';
 					echo '<h1>' . $row['projectTitle'] . '</h1>';
 					echo '<div class="project-images">';
@@ -50,22 +52,37 @@
 						echo '<div class="project-info">';
 							echo '<p>' . $row['description'] . '</p>';
 						echo '</div>';
-						echo '<a href="#" class="project-popup" id="' . $row['about'] . '">';
+						echo '<a href="#" id="' . $row['tag-popup'] . '">';
 							echo '<h3>VIEW</h3>';
 						echo '</a>';
 					echo '</div>';
 				echo '</div>';
+
+				// Project About Page/Pop-up
+				echo '<div class="project-popup" id="' . $row['tag-popup-target'] . '">';
+					echo '<div class="project-popup-back">';
+						echo '<p>Back</p>';
+					echo '</div>';
+					echo '<div class="project-popup-background"></div>';
+					echo '<div class="project-popup-window" id="' . $row['tag-popup-window'] . '">';
+						echo '<div class="project-popup-window-header">';
+							echo '<h2>' . $row['projectTitle'] . '</h2>';
+						echo '</div>';
+						echo '<div class="project-popup-window-info">';
+							echo '<p>' . $row['tag-popup-description'] . '</p>';
+						echo '</div>';
+						echo '<div class="project-popup-window-links">';
+							echo '<a href="#" class="project-popup-window-buttons">';
+								echo '<h3>CASE STUDY</h3>';
+							echo '</a>';
+							echo '<a href="' . $row['link'] . '" class="project-popup-window-buttons">';
+								echo '<h3>PROJECT LINK</h3>';
+							echo '</a>';
+						echo '</div>';
+					echo '</div>';
+				echo '</div>';
 			}
 		?>
-
-		<div class="project-popup">
-			<div class="project-popup-background">
-				
-			</div>
-			<div class="project-popup-window">
-				
-			</div>
-		</div>
 
 	</main>
 
